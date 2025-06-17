@@ -10,6 +10,7 @@ This application uses Leaflet.js to create an interactive map of Ukraine that di
 - Heatmap showing the density of incidents
 - Current frontline positions
 - Historical frontline timeline with animation capabilities
+- Land use changes showing damaged farmland, urban areas, and other land classifications
 - City search functionality
 
 ## Installation
@@ -59,6 +60,7 @@ The map includes several data layers that can be toggled using the layer control
 - **EO Density**: Heatmap showing the concentration of incidents
 - **Frontline**: Current frontline position
 - **Frontline Timeline**: Historical frontline positions that can be animated
+- **Land Use Changes**: Polygons showing changes in land use due to the war
 
 ### Viewing Incident Details
 
@@ -69,6 +71,17 @@ Click on any incident marker to view detailed information about the event, inclu
 - Fatalities
 - Notes
 - Source
+
+### Viewing Land Use Details
+
+Click on any land use polygon to view detailed information about the area, including:
+- Land use type and status
+- Location (Oblast)
+- Area in hectares
+- Damage percentage
+- Cause of damage
+- Previous and current use
+- Additional notes
 
 ### Using the Timeline
 
@@ -88,6 +101,7 @@ The timeline control at the bottom of the screen allows you to view historical f
 
 - **Landmine/ERW Data**: Compiled from various sources including national media, international organizations, and local reports
 - **Frontline Data**: Based on deepstatemap data, updated regularly
+- **Land Use Data**: Compiled from satellite imagery analysis, field reports, and government assessments of war-affected areas
 - **Base Maps**: CartoDB Dark Map and Google Hybrid
 
 ## Dependencies
