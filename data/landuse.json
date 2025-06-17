@@ -1,0 +1,387 @@
+{
+  "type": "FeatureCollection",
+  "name": "ukraine_landuse_data",
+  "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 1,
+        "landuse_type": "farmland",
+        "status": "damaged",
+        "area_hectares": 1250,
+        "damage_percent": 65,
+        "damage_cause": "artillery shelling",
+        "previous_use": "wheat cultivation",
+        "current_use": "unusable",
+        "oblast": "Kharkiv",
+        "notes": "Heavy contamination with unexploded ordnance"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[36.2, 49.9], [36.3, 49.9], [36.3, 49.8], [36.2, 49.8], [36.2, 49.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 2,
+        "landuse_type": "urban",
+        "status": "severely damaged",
+        "area_hectares": 320,
+        "damage_percent": 85,
+        "damage_cause": "aerial bombardment",
+        "previous_use": "residential area",
+        "current_use": "abandoned",
+        "oblast": "Donetsk",
+        "notes": "Most buildings destroyed, infrastructure non-functional"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[37.8, 48.0], [37.9, 48.0], [37.9, 47.9], [37.8, 47.9], [37.8, 48.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 3,
+        "landuse_type": "forest",
+        "status": "damaged",
+        "area_hectares": 780,
+        "damage_percent": 40,
+        "damage_cause": "fires from combat",
+        "previous_use": "protected woodland",
+        "current_use": "partially recovered",
+        "oblast": "Luhansk",
+        "notes": "Significant loss of wildlife habitat, ongoing reforestation efforts"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[38.9, 49.2], [39.0, 49.2], [39.0, 49.1], [38.9, 49.1], [38.9, 49.2]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 4,
+        "landuse_type": "industrial",
+        "status": "destroyed",
+        "area_hectares": 95,
+        "damage_percent": 100,
+        "damage_cause": "targeted strikes",
+        "previous_use": "manufacturing plant",
+        "current_use": "ruins",
+        "oblast": "Zaporizhzhia",
+        "notes": "Complete destruction of facilities, environmental contamination concerns"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.1, 47.8], [35.2, 47.8], [35.2, 47.7], [35.1, 47.7], [35.1, 47.8]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 5,
+        "landuse_type": "farmland",
+        "status": "mined",
+        "area_hectares": 870,
+        "damage_percent": 30,
+        "damage_cause": "landmines",
+        "previous_use": "sunflower fields",
+        "current_use": "awaiting demining",
+        "oblast": "Kherson",
+        "notes": "Extensive mine contamination, demining operations planned"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[33.5, 46.7], [33.6, 46.7], [33.6, 46.6], [33.5, 46.6], [33.5, 46.7]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 6,
+        "landuse_type": "wetland",
+        "status": "contaminated",
+        "area_hectares": 560,
+        "damage_percent": 55,
+        "damage_cause": "chemical spills",
+        "previous_use": "nature reserve",
+        "current_use": "contaminated",
+        "oblast": "Mykolaiv",
+        "notes": "Water pollution affecting local ecosystem, cleanup efforts underway"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[32.0, 47.0], [32.1, 47.0], [32.1, 46.9], [32.0, 46.9], [32.0, 47.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 7,
+        "landuse_type": "urban",
+        "status": "partially damaged",
+        "area_hectares": 210,
+        "damage_percent": 35,
+        "damage_cause": "missile strikes",
+        "previous_use": "commercial district",
+        "current_use": "partially functional",
+        "oblast": "Sumy",
+        "notes": "Some buildings restored, others still damaged"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[34.8, 50.9], [34.9, 50.9], [34.9, 50.8], [34.8, 50.8], [34.8, 50.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 8,
+        "landuse_type": "farmland",
+        "status": "recovering",
+        "area_hectares": 930,
+        "damage_percent": 20,
+        "damage_cause": "military operations",
+        "previous_use": "corn fields",
+        "current_use": "partial cultivation",
+        "oblast": "Chernihiv",
+        "notes": "Soil remediation in progress, partial return to agricultural use"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[31.3, 51.5], [31.4, 51.5], [31.4, 51.4], [31.3, 51.4], [31.3, 51.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 9,
+        "landuse_type": "orchard",
+        "status": "damaged",
+        "area_hectares": 180,
+        "damage_percent": 70,
+        "damage_cause": "artillery fire",
+        "previous_use": "apple orchard",
+        "current_use": "partially abandoned",
+        "oblast": "Kharkiv",
+        "notes": "Most trees destroyed, some areas being replanted"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[36.5, 49.6], [36.6, 49.6], [36.6, 49.5], [36.5, 49.5], [36.5, 49.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 10,
+        "landuse_type": "infrastructure",
+        "status": "destroyed",
+        "area_hectares": 45,
+        "damage_percent": 90,
+        "damage_cause": "targeted bombing",
+        "previous_use": "power station",
+        "current_use": "ruins",
+        "oblast": "Donetsk",
+        "notes": "Critical infrastructure completely destroyed, affecting power supply to region"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[37.5, 48.2], [37.6, 48.2], [37.6, 48.1], [37.5, 48.1], [37.5, 48.2]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 11,
+        "landuse_type": "urban",
+        "status": "rebuilding",
+        "area_hectares": 290,
+        "damage_percent": 45,
+        "damage_cause": "ground combat",
+        "previous_use": "residential area",
+        "current_use": "under reconstruction",
+        "oblast": "Kyiv",
+        "notes": "Reconstruction efforts ongoing, some residents returned"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[30.5, 50.4], [30.6, 50.4], [30.6, 50.3], [30.5, 50.3], [30.5, 50.4]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 12,
+        "landuse_type": "grassland",
+        "status": "contaminated",
+        "area_hectares": 420,
+        "damage_percent": 25,
+        "damage_cause": "fuel spills",
+        "previous_use": "grazing land",
+        "current_use": "unusable",
+        "oblast": "Luhansk",
+        "notes": "Soil contamination from military vehicles and damaged fuel depots"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[39.2, 48.7], [39.3, 48.7], [39.3, 48.6], [39.2, 48.6], [39.2, 48.7]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 13,
+        "landuse_type": "farmland",
+        "status": "abandoned",
+        "area_hectares": 1050,
+        "damage_percent": 15,
+        "damage_cause": "occupation",
+        "previous_use": "mixed agriculture",
+        "current_use": "fallow",
+        "oblast": "Kherson",
+        "notes": "Abandoned due to security concerns, minimal physical damage"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[33.0, 46.4], [33.1, 46.4], [33.1, 46.3], [33.0, 46.3], [33.0, 46.4]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 14,
+        "landuse_type": "vineyard",
+        "status": "damaged",
+        "area_hectares": 135,
+        "damage_percent": 60,
+        "damage_cause": "shelling",
+        "previous_use": "wine production",
+        "current_use": "partially productive",
+        "oblast": "Odesa",
+        "notes": "Some areas replanted, irrigation systems damaged"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[30.2, 46.3], [30.3, 46.3], [30.3, 46.2], [30.2, 46.2], [30.2, 46.3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 15,
+        "landuse_type": "urban",
+        "status": "heavily damaged",
+        "area_hectares": 380,
+        "damage_percent": 75,
+        "damage_cause": "prolonged siege",
+        "previous_use": "city center",
+        "current_use": "partially inhabited",
+        "oblast": "Mariupol",
+        "notes": "Extensive damage to buildings and infrastructure, limited reconstruction"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[37.5, 47.1], [37.6, 47.1], [37.6, 47.0], [37.5, 47.0], [37.5, 47.1]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 16,
+        "landuse_type": "forest",
+        "status": "mined",
+        "area_hectares": 640,
+        "damage_percent": 30,
+        "damage_cause": "landmines and UXO",
+        "previous_use": "recreational forest",
+        "current_use": "restricted access",
+        "oblast": "Chernihiv",
+        "notes": "Extensive mine contamination, demining operations ongoing"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[31.8, 51.3], [31.9, 51.3], [31.9, 51.2], [31.8, 51.2], [31.8, 51.3]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 17,
+        "landuse_type": "industrial",
+        "status": "repurposed",
+        "area_hectares": 85,
+        "damage_percent": 50,
+        "damage_cause": "combat damage",
+        "previous_use": "factory complex",
+        "current_use": "military facility",
+        "oblast": "Zaporizhzhia",
+        "notes": "Converted to military use after partial damage"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.3, 47.5], [35.4, 47.5], [35.4, 47.4], [35.3, 47.4], [35.3, 47.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 18,
+        "landuse_type": "farmland",
+        "status": "recovering",
+        "area_hectares": 890,
+        "damage_percent": 40,
+        "damage_cause": "trenches and fortifications",
+        "previous_use": "barley fields",
+        "current_use": "partial cultivation",
+        "oblast": "Sumy",
+        "notes": "Land being reclaimed after military use, soil remediation needed"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[34.0, 50.6], [34.1, 50.6], [34.1, 50.5], [34.0, 50.5], [34.0, 50.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 19,
+        "landuse_type": "water body",
+        "status": "contaminated",
+        "area_hectares": 310,
+        "damage_percent": 65,
+        "damage_cause": "industrial runoff",
+        "previous_use": "reservoir",
+        "current_use": "contaminated",
+        "oblast": "Dnipropetrovsk",
+        "notes": "Water contamination from damaged industrial facilities, cleanup in progress"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[35.0, 48.5], [35.1, 48.5], [35.1, 48.4], [35.0, 48.4], [35.0, 48.5]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": 20,
+        "landuse_type": "urban",
+        "status": "reconstructed",
+        "area_hectares": 250,
+        "damage_percent": 10,
+        "damage_cause": "missile strikes",
+        "previous_use": "residential area",
+        "current_use": "fully inhabited",
+        "oblast": "Lviv",
+        "notes": "Successfully rebuilt after limited damage, population returned"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[24.0, 49.8], [24.1, 49.8], [24.1, 49.7], [24.0, 49.7], [24.0, 49.8]]]
+      }
+    }
+  ]
+}

@@ -80,3 +80,54 @@ body {
   justify-content: space-between;
   font-size: 12px;
 }
+
+/* Land use legend styles */
+.land-use-legend {
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 180px;
+}
+
+.land-use-legend h4 {
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #000;
+}
+
+.legend-label {
+  font-size: 12px;
+}
+
+/* Land use popup styles */
+.land-use-popup h3 {
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+.land-use-popup p {
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.land-use-popup strong {
+  font-weight: bold;
+}

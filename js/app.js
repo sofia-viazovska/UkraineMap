@@ -611,6 +611,112 @@ function addCitySearchControl(mapObj) {
     }
 }
 
+// Function to add land use data from GeoJSON
+async function addLandUseFromGeoJSON(mapObj, geoJSONPath) {
+    try {
+        // Fetch the GeoJSON data
+        const response = await fetch(geoJSONPath);
+        const geoJSONData = await response.json();
+
+        // Define color mapping for different land use types
+        const landUseColors = {
+            'farmland': '#E8D06D',      // Light yellow
+            'urban': '#C0C0C0',         // Silver
+            'forest': '#228B22',         // Forest green
+            'industrial': '#8B4513',     // Brown
+            'wetland': '#6495ED',        // Cornflower blue
+            'orchard': '#98FB98',        // Pale green
+            'infrastructure': '#708090', // Slate gray
+            'grassland': '#7CFC00',      // Lawn green
+            'vineyard': '#9370DB',       // Medium purple
+            'water body': '#1E90FF'      // Dodger blue
+        };
+
+        // Define color mapping for different statuses
+        const statusOpacity = {
+            'damaged': 0.6,
+            'severely damaged': 0.7,
+            'destroyed': 0.8,
+            'contaminated': 0.5,
+            'mined': 0.4,
+            'partially damaged': 0.5,
+            'recovering': 0.3,
+            'abandoned': 0.2,
+            'rebuilding': 0.4,
+            'repurposed': 0.5,
+            'heavily damaged': 0.7,
+            'reconstructed': 0.3
+        };
+
+        // Create a GeoJSON layer with styling based on land use type and status
+        const landUseLayer = L.geoJSON(geoJSONData, {
+            style: function(feature) {
+                const landUseType = feature.properties.landuse_type;
+                const status = feature.properties.status;
+                const color = landUseColors[landUseType] || '#808080'; // Default gray
+                const opacity = statusOpacity[status] || 0.5; // Default opacity
+
+                return {
+                    color: '#000',       // Black border
+                    weight: 1,           // Border weight
+                    opacity: 0.8,        // Border opacity
+                    fillColor: color,    // Fill color based on land use type
+                    fillOpacity: opacity // Fill opacity based on status
+                };
+            },
+            onEachFeature: function(feature, layer) {
+                // Create popup content with detailed information
+                const props = feature.properties;
+                const popupContent = `
+                    <div class="land-use-popup">
+                        <h3>${props.landuse_type.toUpperCase()} - ${props.status}</h3>
+                        <p><strong>Location:</strong> ${props.oblast} Oblast</p>
+                        <p><strong>Area:</strong> ${props.area_hectares} hectares</p>
+                        <p><strong>Damage:</strong> ${props.damage_percent}%</p>
+                        <p><strong>Cause:</strong> ${props.damage_cause}</p>
+                        <p><strong>Previous use:</strong> ${props.previous_use}</p>
+                        <p><strong>Current use:</strong> ${props.current_use}</p>
+                        <p><strong>Notes:</strong> ${props.notes}</p>
+                    </div>
+                `;
+
+                // Add click event to show popup
+                layer.bindPopup(popupContent, { maxWidth: 300 });
+            }
+        }).addTo(mapObj);
+
+        // Add to overlays for layer control
+        overlays['Land Use Changes'] = landUseLayer;
+
+        // Add a legend for land use types
+        const legend = L.control({ position: 'bottomright' });
+
+        legend.onAdd = function(map) {
+            const div = L.DomUtil.create('div', 'info legend land-use-legend');
+            div.innerHTML = '<h4>Land Use Types</h4>';
+
+            // Add legend items for each land use type
+            for (const [type, color] of Object.entries(landUseColors)) {
+                div.innerHTML += `
+                    <div class="legend-item">
+                        <span class="legend-color" style="background-color: ${color}"></span>
+                        <span class="legend-label">${type.charAt(0).toUpperCase() + type.slice(1)}</span>
+                    </div>
+                `;
+            }
+
+            return div;
+        };
+
+        legend.addTo(mapObj);
+
+        return landUseLayer;
+    } catch (error) {
+        console.error('Error adding land use data from GeoJSON:', error);
+        return null;
+    }
+}
+
 // Load data when the page is ready
 document.addEventListener('DOMContentLoaded', async () => {
     // Add marker group from CSV
@@ -621,6 +727,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Add frontline from GeoJSON
     await addFrontlineFromGeoJSON(ukraineMap, sourcePath + 'data/frontline.json');
+
+    // Add land use data from GeoJSON
+    await addLandUseFromGeoJSON(ukraineMap, sourcePath + 'data/landuse.json');
 
     // Add frontline timeline from directory of individual GeoJSON files
     await addFrontlineTimelineFromDirectory(ukraineMap, sourcePath + 'datatimeline');
