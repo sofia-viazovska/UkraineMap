@@ -1,0 +1,133 @@
+#map {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Timeline styles */
+#timeline-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 80%;
+  max-width: 800px;
+}
+
+#timeline-control {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+#play-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+#play-button:hover {
+  background-color: #45a049;
+}
+
+#timeline-slider {
+  flex-grow: 1;
+  margin: 0 15px;
+  cursor: pointer;
+}
+
+#date-display {
+  font-weight: bold;
+  min-width: 100px;
+  text-align: center;
+}
+
+/* Legend styles */
+.info.legend {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.info.legend h4 {
+  margin: 0 0 5px;
+  font-size: 14px;
+}
+
+.legend-gradient {
+  height: 10px;
+  background: linear-gradient(to right, rgba(0, 0, 255, 0.4), rgba(0, 0, 255, 0.7), rgba(255, 0, 0, 0.7), rgba(255, 0, 0, 1));
+  margin-bottom: 5px;
+}
+
+.legend-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* Land use legend styles */
+.land-use-legend {
+  max-height: 300px;
+  overflow-y: auto;
+  min-width: 180px;
+}
+
+.land-use-legend h4 {
+  margin-bottom: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-color {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border: 1px solid #000;
+}
+
+.legend-label {
+  font-size: 12px;
+}
+
+/* Land use popup styles */
+.land-use-popup h3 {
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  text-align: center;
+}
+
+.land-use-popup p {
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.land-use-popup strong {
+  font-weight: bold;
+}
