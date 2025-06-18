@@ -1,7 +1,7 @@
 // Main JavaScript file for Ukraine Map application
 
 // Global variables
-const sourcePath = './'; // Set to the relative path from the root of the application
+const sourcePath = '.../'; // This should be set to the appropriate path if needed
 
 // Initialize the map centered on Ukraine
 const ukraineMap = L.map('map').setView([49.8397, 31.7604], 6);
