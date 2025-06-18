@@ -740,3 +740,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Layer control removed as per requirement
     L.control.layers(baseLayers, overlays).addTo(ukraineMap);
 });
+
+
+//deploy
